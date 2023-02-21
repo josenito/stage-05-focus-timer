@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bg-body: #E5E5E5;
+  --bg-main: #FFFFFF;
+  --bg-cards: #E1E1E6;
+  --bg-card-select: #02799D;
+
+  --primary: #323238;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+
+  background-color: var(--bg-body);
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 128rem;
+  min-height: 72rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19.2rem;
+
+  background-color: var(--bg-main);
+  padding: 19.2rem 22.95rem;
+
+  border-radius: 1.5rem;
+}
+
+
+.timer {
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: var(--primary);
+
+  display: flex;
+  padding-bottom: 1.7rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.card {
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: var(--bg-cards);
+  border-radius: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: opacity 200ms;
+}
+
+.card:hover,
+button:hover {
+  opacity: .8;
+}
+
+.card svg path {
+  fill: var(--primary);
+}
+
+.cardSelected {
+  background-color: var(--bg-card-select);
+}
+
+.cardSelected svg path {
+  fill: var(--bg-main);
+}
+
+
+@media (max-width: 860px) {
+  main {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 2rem;
+  }
+
+}
